@@ -1,7 +1,18 @@
+require('dotenv').config();
 const http = require('http');
 const express = require('express');
 
-let handler = express();
+const handler = express();
+
+if(process.env.IS_DEV) {
+  const webpack = require('webpack');
+  const webpackDevMiddleware = require('webpack-dev-middleware');
+  const config = require('./webpack.config.js');
+  const compiler = webpack(config);
+  handler.use(webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath
+  }));
+}
 
 handler
   .use(express.static(`${__dirname}/frontend/public`))
