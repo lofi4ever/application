@@ -1,6 +1,4 @@
-$font-default: Verdana, sans-serif;
-
-html, body {
-  font-family: $font-default;
-  font-size: 16px;
-} 
+@import
+  'abstract/variables',
+  'layout/base',
+  'layout/content';

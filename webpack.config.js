@@ -1,7 +1,12 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+require('dotenv').config();
+const isDev = process.env.IS_DEV || false;
+const isProd = !isDev;
+
 module.exports = {
+  mode: isDev ? 'development' : 'production',
   entry: {
     test: './frontend/src/index.js'
   },
@@ -24,6 +29,14 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('autoprefixer')
+              ]
+            }
+          },
           'sass-loader'
         ]
       }
