@@ -1,1 +1,1 @@
-export default (a, b = 2, ...rest) => a * b * rest;
+export default (a, b = 2) => a * b; 

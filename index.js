@@ -4,7 +4,7 @@ const express = require('express');
 let handler = express();
 
 handler
-  .use(express.static(`${__dirname}/public`))
+  .use(express.static(`${__dirname}/frontend/public`))
   .get('/', (req, res) => {
     res.sendFile(`${__dirname}/frontend/index.html`);
   });

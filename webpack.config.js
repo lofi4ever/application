@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    test: './frontend/src/js/index.js'
+    test: './frontend/src/index.js'
   },
   module: {
     rules: [

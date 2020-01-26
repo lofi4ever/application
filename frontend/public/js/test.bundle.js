@@ -81,10 +81,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./frontend/src/js/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./frontend/src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./frontend/src/index.js":
+/*!*******************************!*\
+  !*** ./frontend/src/index.js ***!
+  \*******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/index.js */ \"./frontend/src/js/index.js\");\n\nconsole.log('main js file');\n\n//# sourceURL=webpack:///./frontend/src/index.js?");
+
+/***/ }),
 
 /***/ "./frontend/src/js/index.js":
 /*!**********************************!*\
@@ -106,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (a) {\n  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;\n\n  for (var _len = arguments.length, rest = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {\n    rest[_key - 2] = arguments[_key];\n  }\n\n  return a * b * rest;\n});\n\n//# sourceURL=webpack:///./frontend/src/js/util/multiply.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (a) {\n  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;\n  return a * b;\n});\n\n//# sourceURL=webpack:///./frontend/src/js/util/multiply.js?");
 
 /***/ }),
 
