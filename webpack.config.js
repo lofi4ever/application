@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     test: './frontend/src/index.js'
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
