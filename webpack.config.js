@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
@@ -17,9 +18,22 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '../css/main.css'
+    })
+  ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, './frontend/public/js')

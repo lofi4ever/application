@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/index.js */ \"./frontend/src/js/index.js\");\n\nconsole.log('main js file');\n\n//# sourceURL=webpack:///./frontend/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/index.js */ \"./frontend/src/js/index.js\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/main.scss */ \"./frontend/src/scss/main.scss\");\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* Scripts */\n\n/* !Scripts */\n\n/* Styles */\n\n\n/* !Styles */\n\nconsole.log('main js file');\n\n//# sourceURL=webpack:///./frontend/src/index.js?");
 
 /***/ }),
 
@@ -119,6 +119,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (a) {\n  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;\n  return a * b;\n});\n\n//# sourceURL=webpack:///./frontend/src/js/util/multiply.js?");
+
+/***/ }),
+
+/***/ "./frontend/src/scss/main.scss":
+/*!*************************************!*\
+  !*** ./frontend/src/scss/main.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./frontend/src/scss/main.scss?");
 
 /***/ }),
 
