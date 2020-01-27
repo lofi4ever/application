@@ -8,7 +8,7 @@ const isProd = !isDev;
 module.exports = {
   mode: isDev ? 'development' : 'production',
   entry: {
-    test: './frontend/src/index.js'
+    test: './frontend/index.js'
   },
   devtool: 'inline-source-map',
   module: {
