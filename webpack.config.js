@@ -46,7 +46,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/main.css',
-      //publicPath: '/css/main.css'
     })
   ],
   output: {
