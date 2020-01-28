@@ -45,12 +45,13 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '../css/main.css'
+      filename: 'css/main.css',
+      //publicPath: '/css/main.css'
     })
   ],
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, './frontend/public/js'),
+    filename: 'js/[name].bundle.js',
+    path: path.resolve(__dirname, './frontend/public/'),
     publicPath: '/'
   }
 }

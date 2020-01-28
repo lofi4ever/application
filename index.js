@@ -12,10 +12,11 @@ if(process.env.IS_DEV) {
   handler.use(webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath
   }));
+} else {
+  handler.use(express.static(`${__dirname}/frontend/public`));
 }
 
 handler
-  .use(express.static(`${__dirname}/frontend/public`))
   .get('/', (req, res) => {
     res.sendFile(`${__dirname}/frontend/index.html`);
   });
