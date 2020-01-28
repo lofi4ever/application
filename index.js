@@ -12,6 +12,7 @@ if(process.env.IS_DEV) {
   handler.use(webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath
   }));
+  handler.use(require("webpack-hot-middleware")(compiler));
 } else {
   handler.use(express.static(`${__dirname}/frontend/public`));
 }

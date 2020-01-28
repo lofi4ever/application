@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 require('dotenv').config();
 const isDev = process.env.IS_DEV || false;
@@ -7,9 +8,10 @@ const isProd = !isDev;
 
 module.exports = {
   mode: isDev ? 'development' : 'production',
-  entry: {
-    test: './frontend/index.js'
-  },
+  entry: [
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    './frontend/index.js'
+  ],
   devtool: 'inline-source-map',
   module: {
     rules: [
@@ -46,11 +48,12 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/main.css',
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin() 
   ],
   output: {
-    filename: 'js/[name].bundle.js',
-    path: path.resolve(__dirname, './frontend/public/'),
+    filename: 'js/script.bundle.js',
+    path: path.resolve(__dirname, './frontend/public/'), 
     publicPath: '/'
   }
 }
